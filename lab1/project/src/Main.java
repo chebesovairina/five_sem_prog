@@ -23,7 +23,12 @@ public class Main {
 	        //распределение полученной строки по json объектам
 	      JsonObject stobj= JsonParser.parseString(line).getAsJsonObject();
 	      String pageid[]=Parsing.output(stobj);
-	      
+	      if(pageid.length==0)
+	      {
+	    	  System.out.print("\nСтатей по данному запросу не нашлось. Попробуйте другое сочетание!\n");  
+	      }
+	      else
+	      {
 	         int j=0;//индекс массива pageid
 	         try 
 	            {
@@ -45,5 +50,6 @@ public class Main {
 	         }
 	         else
 	        	 System.out.print("\nВаше число выходит за границы заданного диапазона, повторите запрос!\n");
+	     }
 	     }
 }
