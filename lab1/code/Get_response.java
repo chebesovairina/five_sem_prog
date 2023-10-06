@@ -7,11 +7,11 @@ import java.net.URL;
 public class Get_response 
 {
 	
-        static String line="";
-		static HttpURLConnection connection = null;
-		static URL url = null;
-	    static InputStreamReader isR = null;
-	    static BufferedReader bfR = null;
+        static String line;
+		static HttpURLConnection connection;
+		static URL url;
+	    static InputStreamReader isR;
+	    static BufferedReader bfR;
 	    
 	static String response_api(String urlAddress)
 	{
